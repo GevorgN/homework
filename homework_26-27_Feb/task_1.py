@@ -74,6 +74,12 @@ while active or input_command != "exit":
 		if len(ls) != 0:
 			print(f"What element you want to remove - {ls} ")
 			input_element = input("Please enter the element: ")
+			if input_element.isalpha():
+				pass
+			elif input_element.isdigit():
+				input_element = int(input_element)
+			else:
+				input_element = float(input_element)
 			ls.pop(ls.index(input_element))
 			print(ls)
 		else:

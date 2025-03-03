@@ -77,7 +77,7 @@ import math
 num_frac_1 = fractions.Fraction(input("Please enter the first fraction number in this form a/b: "))
 num_frac_2 = fractions.Fraction(input("Please enter the second fraction number in this form a/b: "))
 
-gcd_num_1 = math.gcd(num_frac_1.numerator,num_frac_1.denominator)
-gcd_num_2 = math.gcd(num_frac_2.numerator,num_frac_2.denominator)
+gcd_num_1 = math.gcd(num_frac_1.numerator,num_frac_2.numerator)
+gcd_num_2 = math.gcd(num_frac_1.denominator,num_frac_2.denominator)
 
 print(gcd_num_1, gcd_num_2)
