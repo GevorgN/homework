@@ -75,12 +75,17 @@ for i in str1:
 
 print(count)
 
-#Write a program that takes a string as input and outputs the longest substring without repeating characters. For example, the string "abcabcbb" should return "abc".
+#Write a program that takes a string as input and outputs the longest substring without repeating characters.
+#For example, the string "abcabcbb" should return "abc".
 
-#str1 = input("Enter the string: ")
-#####################
-#TO DO
-#####################
+str1 = input("Enter the string: ")
+substring = ""
+
+for i in str1:
+	if i not in substring:
+		substring += i
+
+print(substring)
 
 
 #Write a program using a while loop that repeatedly asks the user to input a number until they input 0, then print the sum of all entered numbers.
