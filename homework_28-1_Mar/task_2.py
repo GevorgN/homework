@@ -77,8 +77,10 @@ print(count)
 
 #Write a program that takes a string as input and outputs the longest substring without repeating characters. For example, the string "abcabcbb" should return "abc".
 
-str1 = input("Enter the string: ")
+#str1 = input("Enter the string: ")
+#####################
 #TO DO
+#####################
 
 
 #Write a program using a while loop that repeatedly asks the user to input a number until they input 0, then print the sum of all entered numbers.
