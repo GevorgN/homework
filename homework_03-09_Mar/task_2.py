@@ -7,6 +7,22 @@
 #TO DO
 ###########
 
+datbase = {
+    "ID":{1},
+    "Name":['test'],
+    "LastName":['test2'],
+    "Email":['test@gmail.com'],
+    "Password":['pass'],
+    "Phone":[000]
+}
+input_name = input("Enter the name: ")
+input_pass = input("Enter the password: ")
+
+#for key, value in datbase:
+if input_name in datbase["Name"] and  input_pass in datbase["Password"]:
+    for key, value in datbase.items():
+        print(f"{key} - {value}")
+
 #1. Movie Recommendation System (Dictionaries + Sets)
 #Given a dictionary of users and the movies they have watched, suggest movies that their friends have watched but they haven’t.
 
