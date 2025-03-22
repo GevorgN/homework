@@ -3,7 +3,6 @@ Write a program that takes a sentence and creates a dictionary where each word i
 Example: For the sentence "the cat and the hat", the dictionary should be {"the": 2, "cat": 1, "and": 1, "hat": 1}.
 """
 
-
 input_list = list(input("Enter the sentence: ").split())
 dict_1 = {}
 

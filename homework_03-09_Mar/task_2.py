@@ -8,20 +8,48 @@
 ###########
 
 datbase = {
-    "ID":{1},
+    "ID":[1],
     "Name":['test'],
     "LastName":['test2'],
     "Email":['test@gmail.com'],
     "Password":['pass'],
     "Phone":[000]
 }
-input_name = input("Enter the name: ")
-input_pass = input("Enter the password: ")
 
-#for key, value in datbase:
-if input_name in datbase["Name"] and  input_pass in datbase["Password"]:
-    for key, value in datbase.items():
-        print(f"{key} - {value}")
+command = input("Please choose command Add, Search or Exit:")
+index = 0
+while command.lower() != 'exit':
+    if command.lower() == 'search':
+        input_name = input("Enter the name: ")
+        input_last_name = input("Enter the last name: ")
+
+        #for key, value in datbase:
+        if input_name in datbase["Name"] and  input_last_name in datbase["LastName"]:
+            for value in datbase.values():
+                for i in range(len(value)):
+                    if value[i] == input_name:
+                        index = i
+                print(f'{value[index]}')
+                command = 'exit'
+        else:
+            print('Not Found')
+            command = 'exit'
+    else:
+        print("Please input data for saving.")
+        input_name = input("Enter the name: ")
+        input_last_name = input("Enter the last name: ")
+        input_email = input("Enter the last email: ")
+        input_password = input("Enter the password: ")
+        input_phone = input("Enter the phone: ")
+        datbase['ID'].append(len(datbase['ID'])+1)
+        datbase["Name"].append(input_name)
+        datbase["LastName"].append(input_last_name)
+        datbase["Email"].append(input_email)
+        datbase["Password"].append(input_password)
+        datbase["Phone"].append(input_phone)
+        print('You saved your data')
+        command = input("Please choose command Add, Search or Exit:")
+
 
 #1. Movie Recommendation System (Dictionaries + Sets)
 #Given a dictionary of users and the movies they have watched, suggest movies that their friends have watched but they haven’t.
